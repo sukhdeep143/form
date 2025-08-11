@@ -13,9 +13,10 @@ $("#todoForm").submit(function (e) {
     xhr.setRequestHeader('Content-Type', 'application/json');
 
     xhr.onload = function () {
-        if (this.status === 200) { 
-            console.log("Todo Created Successfully:");
+        if (this.status === 201) { 
             console.log(JSON.parse(this.responseText));
+            console.log("Todo Created Successfully:");
+            console.log("THis si jfishfih")
         } else {
             console.error("Something went wrong!", this.status);
         }
@@ -61,4 +62,24 @@ $("#GetData").click(()=>{
 
     xhr.send()
     
+});
+
+
+$("#filedata").click(()=>{
+    let xhr = new XMLHttpRequest();
+
+    xhr.open("GET", "test.txt", true);
+
+    xhr.onload = function(){
+        if(this.status === 200){
+            console.log(this.responseText);
+            document.getElementById("output").innerHTML = this.responseText;
+
+        }else{
+            console.error("Something is wrong!!!");
+        }
+    }
+
+
+    xhr.send()
 })

@@ -1,1 +1,1 @@
-This is the data we have and we want to see
+This data is in our test.txt file !!! the get method is working in ajax !!!!
