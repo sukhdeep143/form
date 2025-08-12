@@ -6,7 +6,8 @@ $("#todoForm").submit(function (e) {
     let title = $("#title").val();
     let userId = $("#userId").val();
 
-    console.log("Submitting Todo:", title, "for User:", userId);
+    console.log("Submitting Todo : ", title, "for User:", userId);
+
 
     let xhr = new XMLHttpRequest();
     xhr.open("POST", 'https://jsonplaceholder.typicode.com/todos', true);
