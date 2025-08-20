@@ -3,10 +3,13 @@ body {
     color: black;
    
     
+
+
 }
 
 /* Input field style */
 .input-field {
+    
     width: 250px;
     padding: 10px 15px;
     border: 2px solid #ddd;
